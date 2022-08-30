@@ -16,7 +16,7 @@ int is_palindrome(listint_t **head)
 	if (current == NULL)
 		return (1);
 
-	data = malloc(INT_MAX * sizeof(int));
+	data = malloc(1000 * sizeof(int));
 	i = 0;
 
 	while (current)
