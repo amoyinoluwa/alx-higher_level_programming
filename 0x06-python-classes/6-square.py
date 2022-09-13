@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Definition of a square class"""
+
+
 class Square:
     """Definition of a square class"""
     def __init__(self, size=0, position=(0, 0)):
@@ -31,6 +33,10 @@ class Square:
     def position(self, value):
         """Method to set position"""
         if not (type(value).__name__ == "tuple" and len(value) == 2):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not (type(value[0]) is int and type(value[1]) is int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
