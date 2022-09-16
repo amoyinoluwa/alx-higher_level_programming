@@ -8,7 +8,6 @@ def matrix_divided(matrix, div):
     if all(map(lambda x: len(x) == 0 or x is None, matrix)):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     l = len(matrix[0])
-    res = []
     if not all(map(lambda x: len(x) == l, matrix)):
         raise TypeError("Each row of the matrix must have the same size")
     if div == 0:
