@@ -4,14 +4,18 @@ class Rectangle:
     """A rectangle class"""
     number_of_instances = 0
     print_symbol = '#'
+
     def __init__(self, width=0, height=0):
+        """Initializes values of rectangle"""
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
+
     @property
     def width(self):
         """Returns the width of the rectangle"""
         return self.__width
+
     @width.setter
     def width(self, value):
         """Sets the width of the rectangle"""
@@ -21,10 +25,12 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
+
     @property
     def height(self):
         """Returns the height of the rectangle"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """Sets the height of the rectangle"""
@@ -34,10 +40,14 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
     def area(self):
         """Returns the area of rectangle"""
-        return self.__width * self.__width
+        return self.__width * self.__height
+
     def perimeter(self):
+        if self.__width == 0 or self.__height == 0:
+            return 0
         """Returns the perimeter of rectangle"""
         res = 2 * (self.__height + self.__width)
         return res
