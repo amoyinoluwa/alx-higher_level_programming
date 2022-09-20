@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """A rectamgle class"""
+
+
 class Rectangle:
     """A rectangle class"""
     number_of_instances = 0
@@ -72,8 +74,13 @@ class Rectangle:
                 res += str(self.print_symbol)
             res += '\n'
         return res[:-1]
+
     def __repr__(self):
+        """return a string representation of the rectangle for
+        instance creation"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
+
     def __del__(self):
+        """Deletes a rectangle instance"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
