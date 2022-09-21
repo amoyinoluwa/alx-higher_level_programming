@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Method that divides all elements of matrix by div"""
+
+
 def matrix_divided(matrix, div):
     """Function that divides all elements of a matrix"""
     if type(matrix) is not list or not all(map(lambda x: type(x) == list, matrix)):
