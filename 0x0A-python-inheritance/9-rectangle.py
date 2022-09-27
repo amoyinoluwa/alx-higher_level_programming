@@ -1,21 +1,28 @@
 #!/usr/bin/python3
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
-"""class Rectangle that inherits from BaseGeometry"""
+"""
+===================================
+module with class BaseGeometry
+===================================
+"""
 
 
 class Rectangle(BaseGeometry):
-    """class Rectangle that inherits from BaseGeometry"""
-    
+    """Rectangle class that inherits from BaseGeometry"""
+
     def __init__(self, width, height):
-        """Class initializer"""
-        BaseGeometry.__init__(self)
+        """Method for initialized the attrubutes"""
+        self.integer_validator("width", width)
         self.__width = width
+        self.integer_validator("height", height)
         self.__height = height
-        self.integer_validator("width", self.__width)
-        self.integer_validator("height", self.__height)
+
     def area(self):
-        """Calculates the area of rectangle"""
+        """Method to redefine a area method in the parent class"""
+
         return self.__width * self.__height
+
     def __str__(self):
-        return "[{}] {}/{}".format(self.__class__.__name__, self.__width, self.__height)
+        """__str__ method for return the next string"""
+
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
