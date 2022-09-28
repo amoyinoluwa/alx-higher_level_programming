@@ -1,11 +1,15 @@
 #!/usr/bin/python3
+"""
+Python script that prints the pascal triagnle for a give number n
+representing the level of the triangle
+"""
 
 def pascal_triangle(n):
     """
     In mathematics, Pascal's triangle is a triangular array 
     of the binomial coefficients that arises in probability
     theory, combinatorics, and algebra. This program calculates
-    and returns a pascal traingle for n.
+    and returns a pascal traingle
     """
     if n <= 0:
         return []
