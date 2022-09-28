@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""loads json from a sting argument"""
 
 import json
 
