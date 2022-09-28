@@ -6,6 +6,11 @@ representing the level of the triangle
 
 
 def pascal_triangle(n):
+    """
+    Pascal’s triangle, in algebra, a triangular arrangement
+    of numbers that gives the coefficients in the expansion of any binomial expression
+    """
+
     if n <= 0:
         return []
     res = [[1],[1,1]]
